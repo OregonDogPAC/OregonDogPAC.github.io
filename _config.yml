@@ -1,0 +1,2 @@
+title: "Oregon Dog PAC"
+exclude: ["node_modules","less","Gruntfile.js","package.json","README.md"]

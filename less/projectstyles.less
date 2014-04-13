@@ -7,14 +7,43 @@ img {
   margin-bottom: 0;
 }
 
-.navbar-brand {
-  padding-top: 12px;
+.navbar-wrapper {
+  @media (min-width: @screen-tablet) {
+    position: absolute;
+    top: 0
+    right: 0;
+    left: 0;
+    z-index: 20;
+    width: 100%;
+  }
+  .container {
+    margin-left: -15px;
+    margin-right: -15px;
+    @media (min-width: @screen-tablet) {
+      margin-left: auto;
+      margin-right: auto;
+    }
+  }
 }
 
 .navbar-inverse {
-  background-color: #393939;
+  background-color: #444;
   border-width: 0;
-  border-bottom: 3px solid #fff;
+
+  @media (min-width: @screen-tablet) {
+    background-color: transparent;
+    color: #fff;
+    .navbar-nav {
+      &>li {
+        &>a {
+         color: #fff;
+        }
+      }
+    }
+    .navbar-brand {
+      color: #fff;
+    }
+  }
 }
 
 .section-nav {
@@ -65,16 +94,17 @@ img {
       position: relative;
       width: 230%;
       max-width: none;
-      top: -100px;
-      right: 0;
+      left: -100px;
       @media(min-width: @screen-phone){
         width: 130%;
-        top: -50px;
+        top: 0;
+        left: auto;
       }
       @media(min-width: @screen-tablet){
         width: 125%;
-        top: -90px;
+        top: -40px;
         right: auto;
+        left: -50px;
       }
       @media(min-width: @screen-md){
         max-width: 100%;
@@ -88,22 +118,22 @@ img {
     background-color: #888;
     background-color: rgba(50,50,50,.7);
     margin: -20px;
-    padding-top: 20px;
-    padding-bottom: 20px;
+    padding-top: 40px;
+    padding-bottom: 100px;
     @media(min-width: @screen-phone){
       /*width: 100%;*/
     }
     @media(min-width: @screen-tablet){
-      margin: 20px 0;
+      background-color: transparent;
+      margin: 80px 0 20px;
       padding-top: 0;
       padding-bottom: 0;
-      width: 50%;
     }
     @media(min-width: @screen-desktop){
-      width: 33%;
+      margin-bottom: 100px;
     }
     @media(min-width: @screen-lg){
-      margin-bottom: 100px;
+      margin-bottom: 150px;
     }
     h1 {
       font-size: @font-size-base*3;
@@ -192,4 +222,19 @@ a.learn-more {
 
 .popover {
   border-radius: 5px;
+}
+
+.btn-love {
+  background-color: #de5858;
+  color: #fff;
+  &:hover, &:focus {
+    color: #932222;
+    background-color: #c93535;
+  }
+  text-transform: uppercase;
+  font-size: @font-size-base*2;
+}
+
+.btn {
+  transition: all .5s ease;
 }
