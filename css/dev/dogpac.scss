@@ -1,5 +1,5 @@
 // Core variables and mixins
-@import "../../bower_components/bootstrap-sass/lib/variables";
+@import "variables";
 @import "../../bower_components/bootstrap-sass/lib/mixins";
 
 // Reset
@@ -47,3 +47,5 @@
 // Utility classes
 @import "../../bower_components/bootstrap-sass/lib/utilities";
 @import "../../bower_components/bootstrap-sass/lib/responsive-utilities";
+
+@import "site";

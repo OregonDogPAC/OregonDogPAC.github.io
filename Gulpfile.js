@@ -11,7 +11,7 @@ gulp.task('scripts', function(){
 });
 
 gulp.task('css', function(){
-    gulp.src(['./css/dev/*.scss','./css/dev/*.sass'])
+    gulp.src(['./css/dev/*.scss','./css/dev/*.sass','!./css/dev/_*.scss'])
         .pipe(plugins.sass())
         .pipe(plugins.concat('styles.css'))
         .pipe(gulp.dest('./css'));
@@ -81,4 +81,5 @@ gulp.task('connect', function() {
   });
 });
 
-gulp.task('default',['watch','connect']);
+gulp.task('build',['scripts','css','vendorJS','vendorCSS']);
+gulp.task('default',['build','watch','connect']);
