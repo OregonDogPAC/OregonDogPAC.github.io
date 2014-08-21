@@ -1,5 +1,6 @@
 var gulp = require('gulp'),
-	spawn = require('child_process').spawn;
+	spawn = require('child_process').spawn,
+	path = require('path');
 var plugins = require("gulp-load-plugins")({lazy:false});
 
 gulp.task('scripts', function(){
@@ -50,6 +51,11 @@ gulp.task('jekyll', function() {
 });
 
 gulp.task('watch',function(){
+	var server = plugins.livereload();
+
+    var reload = function(file) {
+        server.changed(file.path);
+    };
     gulp.watch(['./js/dev/*.js'],['scripts']);
     gulp.watch(['./css/dev/*.scss','./css/dev/*.sass'],['css']);
 	gulp.watch(
@@ -64,13 +70,14 @@ gulp.task('watch',function(){
 			'index.html'
 		],
 		['jekyll']);
+	gulp.watch(['_site/**']).on('change', reload);
 });
 
 gulp.task('connect', function() {
   plugins.connect.server({
     root: '_site',
 	port: '5000',
-    livereload: true
+    livereload: false
   });
 });
 
