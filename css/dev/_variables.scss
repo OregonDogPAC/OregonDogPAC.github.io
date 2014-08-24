@@ -18,9 +18,10 @@ $gray-lighter:           lighten(#000, 93.5%) !default; // #eee
 // Brand colors
 // -------------------------
 
-$brand-primary:         #428bca !default;
+$brand-primary:         #0093e8 !default; // Dog Pac
+$brand-secondary:		#ffe400 !default; // Dog Pac
 $brand-success:         #5cb85c !default;
-$brand-warning:         #f0ad4e !default;
+$brand-warning:         #ff4835 !default; // Dog Pac
 $brand-danger:          #d9534f !default;
 $brand-info:            #5bc0de !default;
 
@@ -39,12 +40,14 @@ $link-hover-color:      darken($link-color, 15%) !default;
 // Typography
 // -------------------------
 
-$font-family-sans-serif:  "Helvetica Neue", Helvetica, Arial, sans-serif !default;
+//$font-family-sans-serif:  "Helvetica Neue", Helvetica, Arial, sans-serif !default;
+$font-family-sans-serif:  'Open Sans', "Helvetica Neue", Helvetica, Arial, sans-serif !default;
 $font-family-serif:       Georgia, "Times New Roman", Times, serif !default;
 $font-family-monospace:   Monaco, Menlo, Consolas, "Courier New", monospace !default;
 $font-family-base:        $font-family-sans-serif !default;
 
 $font-size-base:          14px !default;
+$font-size-x-large: 	  ceil($font-size-base * 1.60) !default; // ~22px
 $font-size-large:         ceil($font-size-base * 1.25) !default; // ~18px
 $font-size-small:         ceil($font-size-base * 0.85) !default; // ~12px
 
@@ -58,7 +61,7 @@ $font-size-h6:            ceil($font-size-base * 0.85) !default; // ~12px
 $line-height-base:        1.428571429 !default; // 20/14
 $line-height-computed:    floor($font-size-base * $line-height-base) !default; // ~20px
 
-$headings-font-family:    $font-family-base !default;
+$headings-font-family:    'Roboto Slab', sans-serif !default;
 $headings-font-weight:    500 !default;
 $headings-line-height:    1.1 !default;
 $headings-color:          inherit !default;
@@ -87,9 +90,9 @@ $padding-small-horizontal:       10px !default;
 $line-height-large:              1.33 !default;
 $line-height-small:              1.5 !default;
 
-$border-radius-base:             4px !default;
-$border-radius-large:            6px !default;
-$border-radius-small:            3px !default;
+$border-radius-base:             0px !default;
+$border-radius-large:            0px !default;
+$border-radius-small:            0px !default;
 
 $component-active-color:         #fff !default;
 $component-active-bg:            $brand-primary !default;
@@ -254,21 +257,24 @@ $grid-float-breakpoint:     $screen-sm-min !default;
 // -------------------------
 
 // Basics of a navbar
-$navbar-height:                    50px !default;
+$navbar-height:                    117px !default;
 $navbar-margin-bottom:             $line-height-computed !default;
 $navbar-border-radius:             $border-radius-base !default;
 $navbar-padding-horizontal:        floor($grid-gutter-width / 2) !default;
 $navbar-padding-vertical:          (($navbar-height - $line-height-computed) / 2) !default;
 
-$navbar-default-color:             #777 !default;
-$navbar-default-bg:                #f8f8f8 !default;
+// Navbar font size
+$navbar-default-font-size:		   $font-size-large;
+
+$navbar-default-color:             #fff !default;
+$navbar-default-bg:                darken($brand-primary, 10%) !default;
 $navbar-default-border:            darken($navbar-default-bg, 6.5%) !default;
 
 // Navbar links
-$navbar-default-link-color:                #777 !default;
-$navbar-default-link-hover-color:          #333 !default;
+$navbar-default-link-color:                $navbar-default-color !default;
+$navbar-default-link-hover-color:          darken($brand-primary, 30%) !default;
 $navbar-default-link-hover-bg:             transparent !default;
-$navbar-default-link-active-color:         #555 !default;
+$navbar-default-link-active-color:         $navbar-default-link-hover-color !default;
 $navbar-default-link-active-bg:            darken($navbar-default-bg, 6.5%) !default;
 $navbar-default-link-disabled-color:       #ccc !default;
 $navbar-default-link-disabled-bg:          transparent !default;

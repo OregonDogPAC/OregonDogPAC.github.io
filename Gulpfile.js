@@ -20,7 +20,7 @@ gulp.task('css', function(){
 gulp.task('vendorJS', function(){
     //concatenate vendor JS files
     gulp.src(['./bower_components/jquery/dist/jquery.js',
-		'./bower_components/bootstrap-sass/**/*.js',
+		'./bower_components/bootstrap-sass/dist/js/*.min.js',
 		'!./bower_components/bootstrap-sass/js/tests/*.js',
 		'!./**/Gruntfile.js'])
         .pipe(plugins.concat('lib.js'))
@@ -50,27 +50,30 @@ gulp.task('jekyll', function() {
     });
 });
 
-gulp.task('watch',function(){
+gulp.task('reload', function() {
 	var server = plugins.livereload();
 
-    var reload = function(file) {
-        server.changed(file.path);
-    };
+	server.changed();
+});
+
+gulp.task('watch',function(){
     gulp.watch(['./js/dev/*.js'],['scripts']);
     gulp.watch(['./css/dev/*.scss','./css/dev/*.sass'],['css']);
 	gulp.watch(
 		[
+			'!Gulpfile.js',
 			'./css/*.css',
 			'!./js/dev/*.js',
 			'./js/*.js',
-			'_layouts/**',
-			'_includes/**',
+			'./_layouts/**',
+			'./_includes/**',
 			'./**/*.markdown',
 			'./**/*.html',
+			'!./_site/**/*',
 			'index.html'
 		],
 		['jekyll']);
-	gulp.watch(['_site/**']).on('change', reload);
+	gulp.watch(['_site/**'],['reload']);
 });
 
 gulp.task('connect', function() {

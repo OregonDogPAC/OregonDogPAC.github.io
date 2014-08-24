@@ -1,3 +1,91 @@
 body {
-	padding-top: $navbar-height; // :)
+	padding-top: $navbar-height;
+}
+
+img {
+	max-width: 100%;
+	height: auto;
+}
+
+.navbar-brand {
+	width: 300px;
+	padding-top: 24px;
+	padding-bottom: 0;
+}
+
+.navbar {
+	font-size: $navbar-default-font-size;
+	text-transform: uppercase;
+}
+
+.btn-donate {
+	@extend .btn-warning;
+	border-color: transparent;
+	border-width: 0;
+	vertical-align:top;
+}
+
+.navbar {
+	a {
+		font-weight: bold;
+	}
+	.btn-donate {
+		margin:0 $navbar-padding-horizontal;
+		margin-top: ($navbar-padding-vertical - 10);
+	}
+	.meta-info {
+		display: inline-block;
+		margin: 0 $navbar-padding-horizontal;
+		margin-top: ($navbar-padding-vertical - 4);
+	}
+
+	.navbar-nav {
+		> .active {
+			> a, > a:hover, > a:focus {
+				background-color: transparent;
+			}
+		}
+	}
+
+	.navbar-right {
+
+		@media (max-width: $screen-xs-max) {
+			> .btn, .meta-info {
+				margin: 0 0 25px;
+			}
+			.meta-info {
+				display: block;
+			}
+			.navbar-nav {
+				margin-bottom: 10px;
+			}
+		}
+	}
+}
+
+.meta-info {
+	h3 {
+		font-size: $font-size-base;
+		line-height: 1em;
+		margin: 0;
+		padding: 0;
+		color: #fff;
+		font-weight: bold;
+	}
+	a {
+		font-size: $font-size-base;
+		color: $brand-secondary;
+		text-decoration: none;
+		cursor: default;
+		&:hover, &:focus {
+			text-decoration: none;
+		}
+	}
+}
+
+.stacked {
+	* {
+		display: block;
+		clear: both;
+	}
 }
