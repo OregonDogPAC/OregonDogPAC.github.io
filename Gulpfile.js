@@ -69,8 +69,7 @@ gulp.task('watch',function(){
 			'./_includes/**',
 			'./**/*.markdown',
 			'./**/*.html',
-			'!./_site/**/*',
-			'index.html'
+			'!./_site/**/*'
 		],
 		['jekyll']);
 	gulp.watch(['_site/**'],['reload']);

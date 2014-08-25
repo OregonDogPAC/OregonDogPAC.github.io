@@ -1,75 +1,10 @@
----
-navigation:
- - text: About
-   url: /about/
- - text: Answers
-   url: /answers/
- - text: Contact
-   url: /contact/
----
-<!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="utf-8" />
-  <title>{{site.data.config.title}}</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+{% include head.html navigation=site.navigation url=page.url %}
 
-  <link href='http://fonts.googleapis.com/css?family=Open+Sans:400,700|Roboto+Slab:400,700' rel='stylesheet' type='text/css'>
+    {% if page.header %}
 
-  <link rel="stylesheet" href="/css/styles.css" type="text/css">
+      {% include {{page.header}} %}
 
-<script>
-  if((location.host === 'oregondogpac.com')) {
-    (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
-    (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
-    m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
-    })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
-
-    ga('create', 'UA-50030522-1', 'oregondogpac.com');
-    ga('send', 'pageview');
-  }
-</script>
-
-</head>
-
-<body class="{{page.class}}">
-
-    <div class="navbar navbar-default navbar-fixed-top" role="navigation">
-      <div class="container">
-        <div class="navbar-header">
-          <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
-            <span class="sr-only">Toggle navigation</span>
-            <span class="icon-bar"></span>
-            <span class="icon-bar"></span>
-            <span class="icon-bar"></span>
-          </button>
-          <a class="navbar-brand" href="/"><img src="/images/logo.png" alt="Oregon Dog Political Action Committee" /></a>
-        </div>
-        <div class="collapse navbar-collapse">
-            <div class="navbar-right">
-              <!-- <ul class="nav navbar-nav">
-                <li><a href="/about">About</a></li>
-                <li><a href="/answers">Answers</a></li>
-                <li><a href="/contact">Contact</a></li>
-              </ul> -->
-              <ul class="nav navbar-nav">
-                {% assign url = page.url|remove:'index.html' %}
-                {% for link in page.navigation %}
-                <li {% if url == link.url %}class="active"{% endif %}>
-                    <a href="{{link.url}}">{{link.text}}</a>
-                </li>
-                {% endfor %}
-              </ul>
-
-              <a href="#" class="btn btn-donate btn-lg">Contribute</a>
-              <div class="meta-info stacked">
-                <h3>Questions?</h3>
-                <a href="tel:503-555-5555">Call 503-555-5555</a>
-              </div>
-          </div>
-        </div><!--/.nav-collapse -->
-      </div>
-    </div>
+    {% endif %}
 
     <div class="container">
 
@@ -83,11 +18,4 @@ navigation:
 
     </div><!-- /.container -->
 
-<script src="/js/lib.js"></script>
-<script src="/js/scripts.js"></script>
-<script>
-  //$( ".carousel" ).carousel();
-</script>
-
-</body>
-</html>
+{% include foot.html %}

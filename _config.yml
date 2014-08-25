@@ -1,1 +1,9 @@
+navigation:
+- text: About
+  url: /about/
+- text: Answers
+  url: /answers/
+- text: Contact
+  url: /contact/
+
 exclude: ["bower_components","node_modules","package.json","README.md","Gulpfile.js","bower.json","Gem*"]
