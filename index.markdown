@@ -12,7 +12,7 @@ Oregon Dog Political Action Committee supports political candidates that work fo
 
 <p>
 <br />
-<button class="btn btn-warning btn-xl uppercase strong"><span class="glyphicon glyphicon-heart"></span> Donate Now</button>
+<button class="btn btn-warning btn-xl uppercase strong" data-toggle="modal" data-target="#donate-modal"><span class="glyphicon glyphicon-heart"></span> Donate Now</button>
 <br /><br />
 </p>
 
