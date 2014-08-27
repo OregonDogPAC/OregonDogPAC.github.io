@@ -8,13 +8,21 @@
 
     <div class="container">
 
-      <div class="body-content">
-        {{content}}
-      </div>
+        <div class="row">
+          <div class="body-content col-md-9">
+            {{content}}
+          </div>
 
-      <div class="copyright">
-        <p class="text-muted"><small>&copy; 2014 Oregon Dog Political Action Committee. All Rights Reserved.</small></p>
-      </div>
+          <div class="sidebar-content col-md-3">
+            {% include sidebar.html %}
+          </div>
+        </div>
+
+        <div class="row">
+          <div class="copyright col-xs-12">
+            <p class="text-muted"><small>&copy; 2014 Oregon Dog Political Action Committee. All Rights Reserved.</small></p>
+          </div>
+        </div>
 
     </div><!-- /.container -->
 
