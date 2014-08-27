@@ -1,119 +1,32 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="utf-8" />
-  <title>{{site.title}}</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+{% include head.html navigation=site.navigation url=page.url %}
 
-  <link rel="stylesheet" href="css/style.css" type="text/css">
+    {% if page.header %}
 
-<script>
-  if((location.host !== 'localhost')) {
-    (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
-    (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
-    m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
-    })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+      {% include {{page.header}} %}
 
-    ga('create', 'UA-50030522-1', 'oregondogpac.com');
-    ga('send', 'pageview');
-  }
-</script>
+    {% endif %}
 
-</head>
+    <div class="container">
 
-<body class="{{page.class}}">
-
-<div class="navbar-wrapper">
-  <div class="container">
-            <nav class="navbar navbar-inverse" role="navigation">
-                <div class="navbar-header">
-                  <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
-                    <span class="sr-only">Toggle navigation</span>
-                    <span class="icon-bar"></span>
-                    <span class="icon-bar"></span>
-                    <span class="icon-bar"></span>
-                  </button>
-                  <a class="navbar-brand" href="#"><img src="images/logo.png" alt="Oregon Dog PAC" /> Oregon Dog PAC</a>
-                </div>
-
-                <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
-                  <!--ul class="nav navbar-nav navbar-right">
-                    <li class="{% if page.about %}selected {% endif %}nav-about"><a href="#">About</a></li>
-                    <li class="{% if page.donate %}selected {% endif %}nav-donate"><a href="#">Donate</a></li>
-                    <li class="{% if page.qanda %}selected {% endif %}nav-qanda"><a href="#">Q &amp; A</a></li>
-                    <li class="{% if page.resources %}selected {% endif %}nav-resources"><a href="#">Resources</a></li>
-                    <li class="{% if page.contact %}selected {% endif %}nav-contact"><a href="#">Contact</a></li>
-                    <li><a href="tel:9713403940">Ph: 971-340-3940</a></li>
-                  </ul-->
-                  <ul class="nav navbar-nav navbar-right">
-                    <li><a href="tel:9713403940">Ph: 971-340-3940</a></li>
-                  </ul
-                </div><!-- /.navbar-collapse -->
-            </nav>
-  </div><!-- /.container -->
-</div><!-- /.navbar-wrapper -->
-
-
-{{content}}
-
-<div class="modal fade" id="donate-modal" role="dialog" aria-hidden="true" aria-labelledby="modalLabel">
-  <div class="modal-dialog">
-    <div class="modal-content">
-      <div class="modal-header">
-        <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
-        <h4 class="modal-title" id="modalLabel">Donate to Oregon Dog PAC</h4>
-      </div>
-      <div class="modal-body">
-        <p>
-          <span class="h4">Making a donation to Oregon Dog PAC is easy.</span>
-        </p>
-        <!--p>
-          <strong>Did you know your donation may be refundable through your State Tax Returns?</strong><br>
-          <a href="/qanda#refund">Learn More <span class="glyphicon glyphicon-chevron-right"></span></a>
-        </p-->
         <div class="row">
-          <div class="col-xs-6">
-            <h3>Postal Donations</h3>
-            <p>
-              <strong>Send your donation to:</strong>
-            </p>
-            <address>
-              Oregon Dog Political Action Committee<br>
-              17236 NW Lucy Reeder Rd.<br>
-              Portland, Oregon<br>
-              97231
-            </address>
+          <div class="body-content col-md-9">
+            {{content}}
           </div>
-          <div class="col-xs-6">
-            <h3>Online Donations</h3>
-            <form action="https://www.paypal.com/cgi-bin/webscr" method="post" target="_top">
-              <input type="hidden" name="cmd" value="_s-xclick">
-              <input type="hidden" name="hosted_button_id" value="DP3VCXXGF9ZJ6">
-              <input type="image" src="/images/donate.png" border="0" name="submit" alt="PayPal - The safer, easier way to pay online!">
-              <img alt="" border="0" src="https://www.paypalobjects.com/en_US/i/scr/pixel.gif" width="1" height="1">
-            </form>
-            <p><em>We will send a signed receipt to your shipping address for your records.</em></p>
+
+          <div class="sidebar-content col-md-3">
+            {% include sidebar.html %}
           </div>
         </div>
-          <p>
-            <strong>Have Questions?</strong><br>
-            Call Us at 971-340-3940, Email us at <a href="mailto:oregondogpac@hotmail.com">oregondogpac@hotmail.com</a>
-          </p>
+
+    </div><!-- /.container -->
+
+    <div class="row">
+      <div class="copyright col-xs-12">
+          <div class="container">
+              <p class="text-muted"><small>&copy; 2014 Oregon Dog Political Action Committee. All Rights Reserved.</small></p>
+          </div>
       </div>
     </div>
-  </div>
-</div>
 
-<script src="js/vendor/jquery-1.11.0.min.js"></script>
-<script src="js/vendor/bootstrap/collapse.js"></script>
-<script src="js/vendor/bootstrap/transition.js"></script>
-<script src="js/vendor/bootstrap/modal.js"></script>
-<script src="js/vendor/filamentgroup/responsive-carousel.min.js"></script>
-  <script src="js/vendor/filamentgroup/responsive-carousel.pagination.min.js"></script>
-<script src="js/vendor/filamentgroup/responsive-carousel.autoplay.min.js"></script>
-<script>
-  //$( ".carousel" ).carousel();
-</script>
-
-</body>
-</html>
+{% include foot.html %}
+{% include donatemodal.html %}
