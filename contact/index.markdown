@@ -1,6 +1,7 @@
 ---
 layout: default
 class: "contact"
+title: Contact
 ---
 
-<h2>Contact Oregon Dog Political Action Committee</h2>
+##Contact Oregon Dog Political Action Committee

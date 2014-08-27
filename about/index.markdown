@@ -1,6 +1,7 @@
 ---
 layout: default
 class: "about"
+title: About
 ---
 
-<h2>About Oregon Dog Political Action Committee</h2>
+##About Oregon Dog Political Action Committee

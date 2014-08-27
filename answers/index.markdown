@@ -1,6 +1,7 @@
 ---
 layout: default
 class: "answers"
+title: Answers
 ---
 
-<h2>Answers To Your Questions</h2>
+##Answers To Your Questions
