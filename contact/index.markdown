@@ -7,7 +7,7 @@ title: Contact
 ##Contact Oregon Dog Political Action Committee
 
 <div class="row">
-<div class="col-xs-6">
+<div class="col-md-12">
 	<h3>Postal Donations</h3>
 	<p>
 	<strong>Send your donation to:</strong>
@@ -21,7 +21,7 @@ title: Contact
 </div>
 </div>
 <div class="row">
-<div class="col-xs-6">
+<div class="col-md-12">
 	<h3>Online Donations</h3>
 	<form action="https://www.paypal.com/cgi-bin/webscr" method="post" target="_top">
 	<input type="hidden" name="cmd" value="_s-xclick">
