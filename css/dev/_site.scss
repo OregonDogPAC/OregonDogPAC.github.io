@@ -8,9 +8,12 @@ img {
 }
 
 .navbar-brand {
-	width: 300px;
+	width: 260px;
 	padding-top: 24px;
 	padding-bottom: 0;
+	@media (min-width: $screen-sm-min) {
+		width: 300px;
+	}
 }
 
 .navbar {
@@ -190,7 +193,11 @@ img {
 
 .copyright {
 	background-color: darken($brand-primary,20%);
-	padding: $padding-large-vertical 0;
+	padding-top: $padding-large-vertical;
+	padding-bottom: $padding-large-vertical;
+	@media (min-width: $screen-md-min) {
+	  padding: $padding-large-vertical 0;
+	}
 	p {
 		margin: 0;
 	}

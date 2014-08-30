@@ -4373,9 +4373,12 @@ img {
   height: auto; }
 
 .navbar-brand {
-  width: 300px;
+  width: 260px;
   padding-top: 24px;
   padding-bottom: 0; }
+  @media (min-width: 768px) {
+    .navbar-brand {
+      width: 300px; } }
 
 .navbar {
   text-transform: uppercase; }
@@ -4505,7 +4508,11 @@ img {
 
 .copyright {
   background-color: #005482;
-  padding: 10px 0; }
+  padding-top: 10px;
+  padding-bottom: 10px; }
+  @media (min-width: 992px) {
+    .copyright {
+      padding: 10px 0; } }
   .copyright p {
     margin: 0; }
 
