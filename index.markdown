@@ -6,9 +6,12 @@ header: headerhome.html
 
 ##Oregon Dog Political Action Committee
 
-Oregon Dog Political Action Committee supports political candidates that work for the humane treatment of our companion pets. Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae.
+We represents all of the needs of our animal friends, not just the headline grabbing
+issues.  Animal rescue groups do a phenomenal job but just don't have the capability to change the root causes of  many of our regions animal abuse problems.  Cities all across America have embraced the no-kill agenda, including Los Angeles, Austin, and Reno!  Why can't Portland?
 
-##Oregon Gives You $50 To Give To A Charity Of Your Choice.
+Our elected leaders understand the power of voters who unite- using their voices and pocket books.  We hope you will join us in fighting for animals.  You are the key to their success.
+
+##Oregon Gives You $50 To Give To A Political Action Committee Of Your Choice.
 
 <p>
 <br />
