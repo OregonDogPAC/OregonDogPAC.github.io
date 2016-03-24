@@ -4,7 +4,7 @@ class: "contact"
 title: Contact
 ---
 
-##Contact Oregon Dog Political Action Committee
+## Contact Oregon Dog Political Action Committee
 
 <div class="row">
 <div class="col-md-12">
