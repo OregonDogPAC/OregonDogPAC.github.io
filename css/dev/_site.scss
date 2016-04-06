@@ -66,6 +66,11 @@ img {
 			}
 		}
 	}
+	.navbar-toggle {
+		@media (min-width: 1000px) {
+			margin-right: 150px;
+		}
+	}
 }
 
 .meta-info {
