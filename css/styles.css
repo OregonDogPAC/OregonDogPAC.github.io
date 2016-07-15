@@ -5971,3 +5971,19 @@ img {
 
 .strong {
   font-weight: bold; }
+
+/* Anton changes */
+
+.navbar-right {
+  float: none !important;
+  height: 100px !important;
+}
+
+.navbar-brand {
+  padding-left: 40px;
+  padding-right: 40px;
+}
+
+.navbar .meta-info {
+  margin-top: 0;
+}
