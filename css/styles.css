@@ -5987,3 +5987,14 @@ img {
 .navbar .meta-info {
   margin-top: 0;
 }
+
+.animal-conf {
+  padding: 5px;
+  margin-top: 3%;
+}
+
+#featured {
+  text-align: center;
+  margin-top: 10px;
+  font-weight: bold;
+}
