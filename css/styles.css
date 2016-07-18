@@ -5988,9 +5988,15 @@ img {
   margin-top: 0;
 }
 
+/* Animal Conf Page */
+
 .animal-conf {
   padding: 5px;
   margin-top: 3%;
+}
+
+.italic {
+  font-style: italic;
 }
 
 #featured {
@@ -6001,6 +6007,10 @@ img {
 
 .event-details {
   padding: 5px;
+}
+
+.event-details p {
+  font-weight: bold;
 }
 
 .event-details h3 {
@@ -6018,26 +6028,29 @@ img {
 
 #sea-shepherd ~ p {
   clear: left;
+  padding-top: 3%;
 }
 
-#event-location {
-  text-align: center;
-}
-
-#event-location h4 {
-  color: #0065b1;
-}
-
-#event-location p {
-  color: white;
-}
-
-#event-location div {
-  background: linear-gradient(to bottom, #0065b1 0%,#0065b1 50%,#2978bb 50%,#2978bb 100%);
+.event-details h4 {
+  color: #ec1c34;
 }
 
 h3#activities {
+  font-size: 1.3em;
+  font-weight: bold;
   color: #00599b;
   background-color: white;
   text-align: left;
+}
+
+.conf-footer img:nth-child(2) {
+  margin-top: 5%;
+  margin-left: 8%;
+}
+
+.conf-footer img:nth-child(1) {
+  margin-top: -40px; 
+  z-index: 2;
+  position: relative; 
+  float: right;
 }
