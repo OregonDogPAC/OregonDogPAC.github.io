@@ -3,3 +3,4 @@ _site
 Gemfile.lock
 *.psd,
 bower_components
+.DS_Store

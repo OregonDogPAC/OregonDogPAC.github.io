@@ -6035,3 +6035,9 @@ img {
 #event-location div {
   background: linear-gradient(to bottom, #0065b1 0%,#0065b1 50%,#2978bb 50%,#2978bb 100%);
 }
+
+h3#activities {
+  color: #00599b;
+  background-color: white;
+  text-align: left;
+}
