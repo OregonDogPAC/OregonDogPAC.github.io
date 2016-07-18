@@ -5998,3 +5998,40 @@ img {
   margin-top: 10px;
   font-weight: bold;
 }
+
+.event-details {
+  padding: 5px;
+}
+
+.event-details h3 {
+  text-align: center;
+  background-color: #ec1c34;
+  padding: 10px 0px 10px 0px;
+  margin-top: 10px;
+  color: white;
+}
+
+#sea-shepherd {
+  margin-right: 3%;
+  float: left;
+}
+
+#sea-shepherd ~ p {
+  clear: left;
+}
+
+#event-location {
+  text-align: center;
+}
+
+#event-location h4 {
+  color: #0065b1;
+}
+
+#event-location p {
+  color: white;
+}
+
+#event-location div {
+  background: linear-gradient(to bottom, #0065b1 0%,#0065b1 50%,#2978bb 50%,#2978bb 100%);
+}
