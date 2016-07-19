@@ -5972,7 +5972,7 @@ img {
 .strong {
   font-weight: bold; }
 
-/* Anton changes */
+/* Changes to make nav area not so tall */
 
 .navbar-right {
   float: none !important;
@@ -6021,6 +6021,10 @@ img {
   color: white;
 }
 
+.event-details h4 {
+  color: #ec1c34;
+}
+
 #sea-shepherd {
   margin-right: 3%;
   float: left;
@@ -6031,10 +6035,6 @@ img {
   padding-top: 3%;
 }
 
-.event-details h4 {
-  color: #ec1c34;
-}
-
 h3#activities {
   font-size: 1.3em;
   font-weight: bold;
@@ -6043,14 +6043,20 @@ h3#activities {
   text-align: left;
 }
 
-.conf-footer img:nth-child(2) {
-  margin-top: 5%;
-  margin-left: 8%;
-}
-
 .conf-footer img:nth-child(1) {
   margin-top: -40px; 
   z-index: 2;
   position: relative; 
   float: right;
 }
+.conf-footer img:nth-child(2) {
+  margin-top: 5%;
+  margin-left: 8%;
+}
+
+@media (max-width: 700px) {
+  .conf-footer img:nth-child(1) {
+    display: none;
+  }
+}
+
