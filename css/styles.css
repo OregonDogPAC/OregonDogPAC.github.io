@@ -6025,6 +6025,10 @@ img {
   color: #ec1c34;
 }
 
+#art-exhibit {
+  color: black;
+}
+
 #sea-shepherd {
   margin-right: 3%;
   float: left;
@@ -6053,6 +6057,8 @@ h3#activities {
   margin-top: 5%;
   margin-left: 8%;
 }
+
+
 
 @media (max-width: 700px) {
   .conf-footer img:nth-child(1) {
