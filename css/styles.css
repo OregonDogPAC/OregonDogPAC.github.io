@@ -5971,3 +5971,92 @@ img {
 
 .strong {
   font-weight: bold; }
+
+/* Changes to make nav area not so tall */
+
+.navbar-right {
+  float: none !important;
+  height: 100px !important;
+}
+
+.navbar-brand {
+  padding-left: 40px;
+  padding-right: 40px;
+}
+
+.navbar .meta-info {
+  margin-top: 0;
+}
+
+/* Animal Conf Page */
+
+.animal-conf {
+  padding: 5px;
+  margin-top: 3%;
+}
+
+.italic {
+  font-style: italic;
+}
+
+#featured {
+  text-align: center;
+  margin-top: 10px;
+  font-weight: bold;
+}
+
+.event-details {
+  padding: 5px;
+}
+
+.event-details p {
+  font-weight: bold;
+}
+
+.event-details h3 {
+  text-align: center;
+  background-color: #ec1c34;
+  padding: 10px 0px 10px 0px;
+  margin-top: 10px;
+  color: white;
+}
+
+.event-details h4 {
+  color: #ec1c34;
+}
+
+#sea-shepherd {
+  margin-right: 3%;
+  float: left;
+}
+
+#sea-shepherd ~ p {
+  clear: left;
+  padding-top: 3%;
+}
+
+h3#activities {
+  font-size: 1.3em;
+  font-weight: bold;
+  color: #00599b;
+  background-color: white;
+  text-align: left;
+}
+
+.conf-footer img:nth-child(1) {
+  margin-top: -40px; 
+  z-index: 2;
+  position: relative; 
+  float: right;
+}
+.conf-footer img:nth-child(2) {
+  margin-top: 5%;
+  margin-left: 8%;
+}
+
+@media (max-width: 700px) {
+  .conf-footer img:nth-child(1) {
+    display: none;
+  }
+}
+
