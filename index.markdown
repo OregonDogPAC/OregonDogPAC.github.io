@@ -16,7 +16,7 @@ Our elected leaders understand the power of voters who unite -- using their voic
 <p>
 <br />
 <button class="btn btn-warning btn-xl uppercase strong" data-toggle="modal" data-target="#donate-modal"><span class="glyphicon glyphicon-heart"></span> Donate Now</button>
-<a href="/animal_conference"><button class="btn btn-success btn-xl uppercase strong"><span class="glyphicon glyphicon-calendar"></span> Upcoming events</button></a>
+<a href="/future_events"><button class="btn btn-success btn-xl uppercase strong"><span class="glyphicon glyphicon-calendar"></span> Upcoming events</button></a>
 <br /><br />
 </p>
 
